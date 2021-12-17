@@ -13,6 +13,7 @@ public class BinSearch
     return binSearchIter( a, target, 0, a.length-1 );
     //return binSearchRec( a, target, 0, a.length-1 );
   }
+  return -1; //BinSearch only works if sorted
 }
 
 
@@ -67,6 +68,7 @@ int tPos = -1; //init return var to flag value -1
       else if ( a[m].compareTo(target) < 0 )
         lo = m + 1; //move lo to index to right of mid
     }
+    return m;
   }
 
 

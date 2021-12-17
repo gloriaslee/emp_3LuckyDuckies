@@ -1,1 +1,7 @@
-
+2021-12-16
+  - Learned syntax for using currentTimeMillis
+  - Fixed up binSearch code using code in library
+  - noticed that time dif when print out hello is 0
+  - try to create test case that causes significant time difference
+  - the bigger the array, the longer the time
+  - takes even more time if we're inputting random values into arrays
