@@ -1,21 +1,3 @@
-/**
-3 Lucky Duckies - Gloria Lee, Ziying Jian, Nora Miller
-APCS
-HW 48_search
-   class BinSearch
-   Binary search on array of Comparables
-2021 - 12 - 15
-Time Spent: 1.5 h
-QCC:
-What is the syntax for comparing comparables to each other?
-Is it possible to typecast comparables into int? And if so, what's the syntax for doing so?
-Is it more efficient to binary search recursively or iteratively?
-DISCO:
-We cannot compare Comparables to each other using the simple == or < or > operators.
-We cannot typecast Comparables using (int).
-When compiling, a warning comes up, but this warning can be ignored. Why?
-**/
-
 public class BinSearch
 {
 
@@ -26,31 +8,37 @@ public class BinSearch
      post: returns index of target, or returns -1 if target not found
   **/
   public static int binSearch ( Comparable[] a, Comparable target )
-  {
-    //uncomment exactly 1 of the 2 stmts below:
+{
+  if (isSorted(a) == true){
     return binSearchIter( a, target, 0, a.length-1 );
     //return binSearchRec( a, target, 0, a.length-1 );
   }
+}
 
 
   public static int binSearchRec( Comparable[] a,
                                   Comparable target,
                                   int lo, int hi )
   {
-
     int tPos = -1; //init return var to flag value -1
 
-    int m = (lo + hi) / 2; //init mid pos var
-    while ( a[tPos] != a[m]){
-      if(a[tPos] > a[m]){
-        lo = lo + 1;
-        binSearchRec(a, target, lo, hi);
-      } else if(a[tPos] < a[m]){
-        hi = hi - 1;
-        binSearchRec(a, target, lo, hi);
-      }
-    }
-    return tPos;
+        int m = (lo + hi) / 2; //init mid pos var
+
+        //exit case. If lo & hi have crossed, target not present
+        if (lo > hi)
+          return tPos; //-1
+
+        // target found
+        if ( a[m].compareTo(target) == 0 )
+          tPos = m;
+        // value at mid index higher than target
+        else if ( a[m].compareTo(target) > 0 )
+          tPos = binSearchRec( a, target, 0, m-1 );
+        // value at mid index lower than target
+        else if ( a[m].compareTo(target) < 0 )
+          tPos = binSearchRec( a, target, m+1, hi );
+
+        return tPos;
   }//end binSearchRec
 
 
@@ -59,26 +47,27 @@ public class BinSearch
                                    int lo, int hi ) // an index
   {
 
-    int tPos = -1; //init return var to flag value -1
+
+int tPos = -1; //init return var to flag value -1
     int m = (lo + hi) / 2; //init mid pos var
 
-    while( lo != hi ) { // run until lo & hi cross
-      m = (lo + hi) / 2; // why does this need to be up here?
-      if (target == a[m]) {
-        tPos = m;
-        break;
-  } else if ( target.compareTo(a[m]) >= -1 ) { // ***===> ERROR: Cannot compare Comparable objects (could be run with a tag)
-  // look below m now
-        hi = m;
-  } else if ( target.compareTo(a[m]) >= 1 ) { // ignoring any specifics of the case where target is m fpr now
-        // look above m now
-        lo = m;
-      }
-    return tPos;
-    }
-    return tPos;
-  }//end binSearchIter
+    while( lo <= hi ) { // run until lo & hi cross
 
+      m = (lo + hi) / 2; //update mid pos var
+
+      // target found
+      if ( a[m].compareTo(target) == 0 )
+        return m;
+
+      // value at mid index higher than target
+      else if ( a[m].compareTo(target) > 0 )
+        hi = m - 1; //move hi to index to left of mid
+
+      // value at mid index lower than target
+      else if ( a[m].compareTo(target) < 0 )
+        lo = m + 1; //move lo to index to right of mid
+    }
+  }
 
 
   //tell whether an array is sorted in ascending order
