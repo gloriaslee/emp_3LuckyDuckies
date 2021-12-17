@@ -6,14 +6,11 @@ TO GAIN AN UNDERSTANDING OF currentTimeMillis:
   - create and populate an array of 1000000 ints with random int values and print it
   - what if we increase the range of the random int values?
 
-3. Printing out:
-  - int arraylist vs String arraylist?
-  - Which takes longer?
 
-4. Bin vs Lin (insert)
+3. Bin vs Lin (insert)
   - How long does it take to add using lin search vs bin search?
 
-5. binSearch vs linSearch
+4. binSearch vs linSearch
 How long does it take to:
 Different data points to consider:
   - Print out binsearch of an arraylist of Integers for a target
@@ -21,6 +18,6 @@ Different data points to consider:
   - How long does the array have to be before we get a significant time diff?
   - How long before an array is too long to be searched with linSearch, but still can be searched with binSearch?
 
-6. Create a method to average data points
+5. Create a method to average data points
 
 7. Test other variable types, such as Strings or ints

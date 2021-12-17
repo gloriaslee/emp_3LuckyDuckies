@@ -73,8 +73,7 @@ ArrayList<Integer> makeTestCase - wrapper method to streamline test case creatio
 
     ArrayList<Integer> bob = makeTestCase(100000);
     for (int x = 0; x < 10; x++ ) {
-      val = Math.random(100000);
-      bob.linSearch()
+
     }// doing a bunch of searches of values on bob
 
   }
