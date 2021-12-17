@@ -2,27 +2,6 @@ import java.util.ArrayList;
 
 public class SearchDriver{
 
-  // public static boolean insert(ArrayList<Integer> arr, Integer value) { // this is a function that adds each element to teh array
-  //    if (arr.size() == 0){
-  //      arr.add(value);
-  //    } else if (arr.get(0) > value) {
-	// 		arr.add(0,value);
-	// 		return true;
-  //
-  //   }	else if (value > arr.get(arr.size()-1)) {
-	// 		arr.add(value);
-	// 		return true;
-  //
-  //   }	else {
-	// 		for(int i = 0; i < arr.size(); i++) {
-	// 			if (arr.get(i) < value && arr.get(i+1) > value) { //should this be >= and <= or just > and <
-	// 				arr.add(i+1, value);
-	// 				return true;}
-	// 			}
-	// 		}
-	// 		return false;
-	// 	}//end addLinear
-
     public static void insert2(ArrayList<Integer> arr, Integer newVal)
       {
         //initialize high, low, midpt indices
@@ -66,6 +45,7 @@ ArrayList<Integer> makeTestCase - wrapper method to streamline test case creatio
   }
 
 
+
   public static void main(String[] args) {
 
     // invoking START
@@ -73,32 +53,8 @@ ArrayList<Integer> makeTestCase - wrapper method to streamline test case creatio
     // N: currentTimeMillis is a method of class System
     // N: currentTimeMillis is invoked upon variable creation
 
-    //~~==============TESTING INTS
-  /*  int[] a = new int[100];
-   for (int i = 0; i < 100; i++){
-    a[i] = i;
- }
-   */
 
-    //~~==============TESTING INTEGER
-    startTime = System.currentTimeMillis();
-    ArrayList<Integer> IntArr1 = new ArrayList<Integer>(1000000); // 1 million
-    for (int i = 0; i < 1000000; i++){
-      IntArr1.add( (int) (Math.random() * 101) );
-    }
-    long endTime = System.currentTimeMillis();
-    System.out.println(endTime - startTime); // elapsed time in milliseconds
-
-
-    startTime = System.currentTimeMillis();
-    ArrayList<Integer> IntArr2 = new ArrayList<Integer>(1000000);
-    for (int i = 0; i < 1000000; i++){
-      IntArr2.add( (int) (Math.random() * 701) );
-    }
-    endTime = System.currentTimeMillis();
-    System.out.println(endTime - startTime);
-
-
+    //~~==============TESTING the timing stuff
     startTime = System.currentTimeMillis();
     // sets up an ordered test case
     ArrayList<Integer> IntArr3 = makeTestCase(100000);
@@ -109,6 +65,17 @@ ArrayList<Integer> makeTestCase - wrapper method to streamline test case creatio
     endTime = System.currentTimeMillis();
     System.out.println(endTime - startTime);
 
+
+
+    ArrayList<Integer> linSearchTimes = new ArrayList<Integer>(); // to record the search times for linSearch
+
+    // first time testing linSearch vs binSearch:
+
+    ArrayList<Integer> bob = makeTestCase(100000);
+    for (int x = 0; x < 10; x++ ) {
+      val = Math.random(10000)
+      bob.linSearch()
+    }// doing a bunch of searches of values on bob
 
   }
 
