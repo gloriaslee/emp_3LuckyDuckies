@@ -20,4 +20,9 @@ Different data points to consider:
 
 5. Create a method to average data points
 
-6. Test other variable types, such as Strings or ints
+6. make larger test cases, 
+      create binary search test cases, 
+      and create a method to take average of data points.
+  - created plans to create a .in file with a preset random super large array so that we don't have to waste time to generate a randomly large array.
+    then, we will run test cases on this array.
+  
