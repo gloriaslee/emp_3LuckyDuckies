@@ -2,6 +2,7 @@ QCC:
 - What does it take to move from 0 milliseconds to 1 milliseconds of run time
 for each object type, such as Strings or Integers?
 - Why is there such great variability in how long the same function might take, depending on when you run it?
+- How big is big enough? Or too big?
 
 DISCO:
 - When populating array list of 1000000 ints with random values and printing it out,
