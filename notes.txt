@@ -1,2 +1,11 @@
-Questions:
+QCC:
 - What does it take to move from 0 milliseconds to 1 milliseconds of run time?
+
+DISCO:
+- When populating array list of 1000000 ints with random values and printing it out,
+  computer takes too long and we must ^C out.
+
+  - noticed that time dif when print out hello is 0
+    - try to create test case that causes significant time difference
+    - the bigger the array, the longer the time
+    - takes even more time if we're inputting random values into arrays
