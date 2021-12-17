@@ -1,6 +1,11 @@
-2021-12-16
+2021-12-16, whole team, v0:
   - Learned syntax for using currentTimeMillis
   - Fixed up binSearch code using code in library
   - Jotted down observations in notes.txt
   - Created test cases to cause significant time differences from each other.
   - Added method to add values into an arraylist and maintain the sorted invariant
+2021-12-16, Nora, v1, v2: 
+  - Attempted to invoke LinSearch in SearchDriver; ran into issues with using linSearch, which requires Comparables, on the ArrayLists in SearchDriver
+  - Modified LinSearch and BinSearch to use ArrayList<Integers> instead of Comparables. 
+  - Checked again to make sure the search functions were working as expected
+  - Is currently getting a strange error in which linear searching an array appears to take either 0 or 15 to 16 seconds the majority of the time
