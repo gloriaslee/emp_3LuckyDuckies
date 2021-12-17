@@ -20,4 +20,4 @@ Different data points to consider:
 
 5. Create a method to average data points
 
-7. Test other variable types, such as Strings or ints
+6. Test other variable types, such as Strings or ints
