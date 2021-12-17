@@ -1,6 +1,6 @@
 # emp_3LuckyDuckies
 
-### 3LuckyDuckies: Gloria Lee, Ziying Jian, Nora Miller
+#### 3LuckyDuckies: Gloria Lee, Ziying Jian, Nora Miller
 
 ## Results:
 
