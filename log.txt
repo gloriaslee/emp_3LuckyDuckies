@@ -9,11 +9,12 @@
   - Modified LinSearch and BinSearch to use ArrayList<Integers> instead of Comparables. 
   - Checked again to make sure the search functions were working as expected
   - Is currently getting a strange error in which linear searching an array appears to take either 0 or 15 to 16 seconds the majority of the time
- 2021-12-17, whole team, v2:
+ 2021-12-17, whole team, v1:
   - established next steps: 
       make larger test cases, 
       create binary search test cases, 
       and create a method to take average of data points.
   - created plans to create a .in file with a preset random super large array so that we don't have to waste time to generate a randomly large array.
     then, we will run test cases on this array.
+  - went back from v2 to v1 because of changes we made to LinSearch and BinSearch that should not have been made to keep original functionality.
   
