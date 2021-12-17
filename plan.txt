@@ -12,7 +12,12 @@ TO GAIN AN UNDERSTANDING OF currentTimeMillis:
   - int arraylist vs String arraylist?
   - Which takes longer?
 
-4. How long does it take to:
+4. Bin vs Lin (insert)
+  - How long does it take to add using lin search vs bin search?
+
+5. binSearch vs linSearch
+
+How long does it take to:
   - print out binsearch an arraylist of ints for a target
   - print out linsearch an array of ints for a target
   - how long does the array have to be before we get a significant time diff?
