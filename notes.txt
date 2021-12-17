@@ -1,1 +1,2 @@
-
+Questions:
+- What does it take to move from 0 milliseconds to 1 milliseconds of run time?
