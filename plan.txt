@@ -2,8 +2,6 @@
 
 TO GAIN AN UNDERSTANDING OF currentTimeMillis:
 2. How long does it take to:
-  - print out basic String? ("Hello World")
-  - create and populate an array of 10 ints and then print it
   - what if it was an array of 1000000 ints?
   - create and populate an array of 1000000 ints with random int values and print it
   - what if we increase the range of the random int values?
@@ -16,10 +14,13 @@ TO GAIN AN UNDERSTANDING OF currentTimeMillis:
   - How long does it take to add using lin search vs bin search?
 
 5. binSearch vs linSearch
-
 How long does it take to:
-  - print out binsearch an arraylist of ints for a target
-  - print out linsearch an array of ints for a target
-  - how long does the array have to be before we get a significant time diff?
-  - The same with an array of Strings?
+Different data points to consider:
+  - Print out binsearch of an arraylist of Integers for a target
+  - Print out linsearch of an array of Integers for a target
+  - How long does the array have to be before we get a significant time diff?
   - How long before an array is too long to be searched with linSearch, but still can be searched with binSearch?
+
+6. Create a method to average data points
+
+7. Test other variable types, such as Strings or ints
