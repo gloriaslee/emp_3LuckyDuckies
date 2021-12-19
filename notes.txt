@@ -1,6 +1,4 @@
 QCC:
-- What does it take to move from 0 milliseconds to 1 milliseconds of run time
-
 - Why is there such great variability in how long the same function might take, depending on when you run it?
 
 - How big is big enough? Or too big?
@@ -17,3 +15,9 @@ DISCO:
     - the bigger the array, the longer the time
     - takes even more time if we're inputting random values into arrays
 - However, they can't be TOO large - 60 million is around the cap for Nora's computer; up to 200 million for Gloria's
+- With the final version of our code, binSearch search times still are only 0 milliseconds for searching just one element,
+no matter how large we make the array until the array is too large overall.
+- It's a better idea to get the elapsed time from the start to end of the for loop instead of getting the elapsed time
+to find each individual target.
+- Yes, it IS possible to run a bunch of stuff using comparables without getting very many weird error messages
+requiring you to run it with a special tag
