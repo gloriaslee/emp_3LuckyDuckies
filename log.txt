@@ -23,4 +23,5 @@
   
   2021-12-19, whole team, v3:
   - Made Search more efficient as a whole
+  - Decided to scrap our plan for using a .in file because we didn't need to account for Random anymore
   
