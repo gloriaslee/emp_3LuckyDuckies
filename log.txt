@@ -4,17 +4,23 @@
   - Jotted down observations in notes.txt
   - Created test cases to cause significant time differences from each other.
   - Added method to add values into an arraylist and maintain the sorted invariant
+  
 2021-12-16, Nora, v1, v2: 
   - Attempted to invoke LinSearch in SearchDriver; ran into issues with using linSearch, which requires Comparables, on the ArrayLists in SearchDriver
-  - Modified LinSearch and BinSearch to use ArrayList<Integers> instead of Comparables. 
+  - Modified LinSearch and BinSearch to use ArrayList<Integers> instead of Comparables (v2)
   - Checked again to make sure the search functions were working as expected
   - Is currently getting a strange error in which linear searching an array appears to take either 0 or 15 to 16 seconds the majority of the time
+  - Error seemed to fix itself??
+  
  2021-12-17, whole team, v1:
-  - established next steps: 
+  - Established next steps: 
       make larger test cases, 
       create binary search test cases, 
       and create a method to take average of data points.
-  - created plans to create a .in file with a preset random super large array so that we don't have to waste time to generate a randomly large array.
-    then, we will run test cases on this array.
-  - went back from v2 to v1 because of changes we made to LinSearch and BinSearch that should not have been made to keep original functionality.
+  - Created plans to create a .in file with a preset random super large array so that we don't have to waste time to generate a randomly large array.
+  - Then, we will run test cases on this array.
+  - Went back from v2 to v1 because of changes we made to LinSearch and BinSearch that should not have been made to keep original functionality
+  
+  2021-12-19, whole team, v3:
+  - Made Search more efficient as a whole
   
