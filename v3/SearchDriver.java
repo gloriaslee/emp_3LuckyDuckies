@@ -41,21 +41,9 @@ public class SearchDriver{
 
 
     public static void main(String[] args) {
-
-        //~~============== TESTING how long it takes to populate a 10^6 Comparable ArrayList
-        long startTime = System.currentTimeMillis();
-        // sets up an ordered test case
-        Comparable[] fridge = makeIntTestCase(1_000_000); // 10^6
-        // Notes to self: do not print the array itself
-        // N: With length 100 AND the print statement, it takes about 1-2 ms
-        // N: With length 100 AND WITHOUT the print statement, it takes about 0-1 ms
-        long endTime = System.currentTimeMillis();
-        System.out.println("Populating Comparable[] of size 1 million: " + (endTime - startTime) );
-
-
         // TESTING BINSEACH VS. LINSEARCH
         int trialsPerArray = 20; // num of trials
-        int arrSize = 60_000_000; // array size is 60 mil
+        int arrSize = 250_000_000; // array size is 60 mil
 
         Comparable[] linSResults = new Comparable[trialsPerArray]; // will be populated with the search results
         Comparable[] linSTimes = new Comparable[trialsPerArray]; // will be populated with the search times for linSearch
@@ -78,9 +66,9 @@ public class SearchDriver{
 
 // ~~====== TESTING BINSEARCH
             //System.out.print(val + " at ");
-            startTime = System.currentTimeMillis();
+            long startTime = System.currentTimeMillis();
             int foundBin = BinSearch.binSearch(files, target);
-            endTime = System.currentTimeMillis();
+            long endTime = System.currentTimeMillis();
             binSResults[x] = foundBin; // to check if the times below make sense
             binSTimes[x] = (endTime - startTime);
 
