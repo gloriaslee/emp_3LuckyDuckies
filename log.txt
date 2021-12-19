@@ -24,6 +24,8 @@
   2021-12-19, whole team, v3:
   - Made Search more efficient as a whole
   - Decided to scrap our plan for using a .in file because we didn't need to account for Random anymore
+  - Tested linSearch and binSearch
   - Decided to average the linSearch and binSearch times for for every set of trials
   - Ran into the issue where Comparables can't be added (to find average)
-  - Got around that issue by typecasting
+  - Decided to scrap our plan for finding the average because the results for binSearch and linSearch are so clear cut
+  - We struggled to find a substantial difference in binSearch times because of memory limits
