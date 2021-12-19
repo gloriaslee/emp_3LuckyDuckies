@@ -2,44 +2,15 @@ import java.util.ArrayList;
 
 public class SearchDriver{
 
-    public static void insert2(ArrayList<Integer> arr, Integer newVal)
-      {
-        //initialize high, low, midpt indices
-        int lo = 0;
-        int med = 0;
-        int hi = arr.size()-1;
 
-        while ( lo <= hi ) { //running until target is found or bounds cross
-
-          med = (lo + hi) / 2;
-          int x = arr.get(med).compareTo( newVal );
-
-          if ( x == 0 ) {
-            //equal value found, insert here
-            arr.add( med, newVal );
-            return;
-          }
-          else if ( x > 0 )
-            //newVal < med, so look at lower half of data
-            hi = med - 1;
-          else
-            //newVal > med, so look at upper half of data
-            lo = med + 1;
-        }
-        // If you made it this far, newVal is not present.
-        // So insert at lo.
-        arr.add( lo, newVal );
-        //Q: How do you know lo is correct insertion index?
-      }
 
 /*
 ArrayList<Integer> makeTestCase - wrapper method to streamline test case creation
 */
-  public static ArrayList<Integer> makeTestCase(int size) {
-    ArrayList<Integer> arr = new ArrayList<Integer>(size);
+  public static Comparable[] makeTestCase(int size) {
+    Comparable[] arr = new Comparable[](size);
     for (int i = 0; i < size; i++){
-      Integer val = (int) (Math.random() * size);
-      insert2(arr, val);
+      arr[i] = i*2;
     }
      return arr;
   }
@@ -48,37 +19,41 @@ ArrayList<Integer> makeTestCase - wrapper method to streamline test case creatio
 
   public static void main(String[] args) {
 
-    // invoking START
-    long startTime = System.currentTimeMillis();
-	long endTime = System.currentTimeMillis();
-    // N: currentTimeMillis is a method of class System
-    // N: currentTimeMillis is invoked upon variable creation
-
-
     //~~==============TESTING the timing stuff
     startTime = System.currentTimeMillis();
     // sets up an ordered test case
-    ArrayList<Integer> IntArr3 = makeTestCase(100000);
-    System.out.println(IntArr3);
+    ArrayList<Integer> fridge = makeTestCase(1000000); // 10^6
+    // Notes to self: do not print the array itself
   // N: With length 100 AND the print statement, it takes about 1-2 ms
   // N: With length 100 AND WITHOUT the print statement, it takes about 0-1 ms
-  // N: the time it takes seems to be growing exponentially
     endTime = System.currentTimeMillis();
     System.out.println(endTime - startTime);
 
 
+  // TESTING BINSEACH VS. LINSEARCH
+    ArrayList<Integer> linSResults = new ArrayList<Integer>(); // to record searcn results
+    ArrayList<Long> linSTimes = new ArrayList<Long>(); // to record the search times for linSearch
 
-    ArrayList<Integer> linSearchTimes = new ArrayList<Integer>(); // to record the search times for linSearch
+    System.out.println("Testing the search function");
+    ArrayList<Integer> files = makeTestCase(100000);
+  //System.out.println(files);
 
-    // first time testing linSearch vs binSearch:
-
-    ArrayList<Integer> bob = makeTestCase(100000);
-    for (int x = 0; x < 10; x++ ) {
+    for (int x = 0; x < 10; x++ ) { // the upper bound here will deterint the sizes of the two ArrayLists above
       Integer val = (int)(Math.random()*100000);
-      LinSearch.linSearch(bob, val); // will this work with stuff more spefic than Comparables?
-    }// doing a bunch of searches of values on bob
+    //System.out.print(val + " at ");
 
+    startTime = System.currentTimeMillis();
+      int found = LinSearch.linSearch(files, val);
+    endTime = System.currentTimeMillis();
+
+      linSTimes.add(endTime - startTime);
+    //linSResults.add(found);
+
+    }// doing a bunch of searches of values on bob
+  //System.out.println(linSResults);
+  System.out.println(linSTimes);
   }
+
 
 
 }
