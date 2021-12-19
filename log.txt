@@ -29,3 +29,4 @@
   - Ran into the issue where Comparables can't be added (to find average)
   - Decided to scrap our plan for finding the average because the results for binSearch and linSearch are so clear cut
   - We struggled to find a substantial difference in binSearch times because of memory limits
+  - Accounted for the time for each individual test case and the elapsed time in total
