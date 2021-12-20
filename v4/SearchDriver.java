@@ -126,10 +126,8 @@ public class SearchDriver{
     public static long[] testWorstCase(int trialsPerArray, int arrSize){
       long[] output = new long[2];
       Comparable[] files = makeIntTestCase(arrSize); // making an array of this size
-       
- 
-        // ~~====== TESTING BINSEARCH
 
+// ~~====== TESTING BINSEARCH
       long elapStartTime = System.currentTimeMillis(); // elapsed start time
           int targetIndex = arrSize - 1; // generates random index
           Comparable target = files[targetIndex]; //the value of the targeted element
@@ -157,8 +155,7 @@ public class SearchDriver{
       output += (results[0] + "\n");
       output += ("Elapsed time for linear search for worst case: ");
       output += (results[1] + "\n");
-      return output;
-      }
+      } return output;
     }
 
 
