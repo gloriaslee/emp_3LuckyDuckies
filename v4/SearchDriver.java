@@ -161,8 +161,8 @@ public static void main(String[] args) {
   System.out.println("Timing searches for multiple values together \n");
   System.out.println(MultCasesWrapper(200, 20_000_000));
   System.out.println(WorstCaseWrapper(200, 20_000_000));
-  // System.out.println("Timing the searches of each value searched \n");
-  // System.out.println(printIndivResults(20, 80_000_000));
+  System.out.println("Timing the searches of each value searched \n");
+  System.out.println(printIndivResults(20, 20_000_000));
 
       }//end main
     }//end class
