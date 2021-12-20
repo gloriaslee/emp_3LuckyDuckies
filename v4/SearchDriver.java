@@ -124,39 +124,36 @@ public class SearchDriver{
   }
     
     public static long[] testWorstCase(int trialsPerArray, int arrSize){
-      long[] output = new long[2];
       Comparable[] files = makeIntTestCase(arrSize); // making an array of this size
-
-// ~~====== TESTING BINSEARCH
-      long elapStartTime = System.currentTimeMillis(); // elapsed start time
+        long[] totalArray = long[2];
+        for (int i = 0; i < 100; i++){
+            long elapStartTime = System.currentTimeMillis(); // elapsed start time
           int targetIndex = arrSize - 1; // generates random index
           Comparable target = files[targetIndex]; //the value of the targeted element
           int foundBin = BinSearch.binSearch(files, target);
-      long elapEndTime = System.currentTimeMillis();
-      output[0] = elapEndTime - elapStartTime; // this represents the time for binary search
-
-// ~~====== TESTING lINSEARCH
-      elapStartTime = System.currentTimeMillis();
+          long elapEndTime = System.currentTimeMillis();
+          totalArray[0] += (elapEndTime - elapStartTime);
+            
+          elapStartTime = System.currentTimeMillis();
          targetIndex = arrSize - 1; // generates random index
          target = files[targetIndex]; //the value of the targeted element
-        int foundLin = LinSearch.linSearch(files, target);
-    
-       elapEndTime = System.currentTimeMillis();
-        output[1] = elapEndTime - elapStartTime; // this represents the time for linear search
-
-    return output;
+          int foundLin = LinSearch.linSearch(files, target);
+           elapEndTime = System.currentTimeMillis();
+            totalArray[1] += (elapEndTime - elapStartTime);
+        }//end for loop
+    return totalArray;
     }
     
+
       public static String WorstCaseWrapper(int trials, int arrLength){
-          
       long[] results = testWorstCase(trials, arrLength);
       String output = "";
-          for (int i = 0; i < 100; i++){
+      Comparable[] outArr = new Comparable[2];
       output += ("Elapsed time for binary search for worst case: ");
       output += (results[0] + "\n");
       output += ("Elapsed time for linear search for worst case: ");
       output += (results[1] + "\n");
-      } return output;
+      return output;
     }
 
 
