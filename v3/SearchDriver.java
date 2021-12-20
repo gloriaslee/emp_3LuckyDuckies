@@ -38,7 +38,7 @@ public class SearchDriver{
     //     }
     //     return (sum / array.length );
     // }
-    public static String printExperResults( int trials, int arrLength) // wrapper method for testing individual trials, so that you get a commprehensible printed result
+    public static String printIndivResults( int trials, int arrLength) // wrapper method for testing individual trials, so that you get a commprehensible printed result
       { //int counter = 0;
         Comparable[][] experResults = testIndvCases(trials, arrLength);
         String output="";
@@ -91,61 +91,52 @@ public class SearchDriver{
 
     }
 
+    public static String MultCasesWrapper(int trials, int arrLength){
+      long[] results = testMultipleCases(trials, arrLength);
+      String output = "";
+      output += ("Elapsed time for binary search for " + trials + " random values in an array of length " + arrLength + ": ");
+      output += (results[0] + "\n");
+      output += ("Elapsed time for linear search of " + trials + " random values (that are not necessarily the same): ");
+      output += (results[1] + "\n");
+      return output;
+    }
+
+
+    public static long[] testMultipleCases(int trialsPerArray, int arrSize){ // returns the
+      long[] output = new long[2];
+      Comparable[] files = makeIntTestCase(arrSize); // making an array of this size
+        // ~~====== TESTING BINSEARCH
+
+      long elapStartTime = System.currentTimeMillis(); // elapsed start time
+      for (int x = 0; x < trialsPerArray; x++ ) {
+          int targetIndex = (int)(Math.random()*(arrSize+1)); // generates random index
+          Comparable target = files[targetIndex]; //the value of the targeted element
+
+          int foundBin = BinSearch.binSearch(files, target);
+        }//end for loop
+      long elapEndTime = System.currentTimeMillis();
+      output[0] = elapEndTime - elapStartTime; // this represents the time for binary search
+
+// ~~====== TESTING lINSEARCH
+      elapStartTime = System.currentTimeMillis();
+      for (int x = 0; x < trialsPerArray; x++ ) {
+        int targetIndex = (int)(Math.random()*(arrSize+1)); // generates random index
+        Comparable target = files[targetIndex]; //the value of the targeted element
+
+          int foundLin = LinSearch.linSearch(files, target);
+        }
+       elapEndTime = System.currentTimeMillis();
+        output[1] = elapEndTime - elapStartTime; // this represents the time for linear search
+
+    return output;
+  }
 
 
 public static void main(String[] args) {
+  System.out.println("Timing searches for multiple values together \n");
+  System.out.println(MultCasesWrapper(200, 20_000_000));
+  // System.out.println("Timing the searches of each value searched \n");
+  // System.out.println(printIndivResults(20, 80_000_000));
 
-  System.out.println(printExperResults(20, 80_000_000));
-
-  //   int trialsPerArray = 2; // num of trials
-  //   int arrSize = 60_000_000; // array size is 60 mil
-  //
-  //
-  //         Comparable[] linSResults = new Comparable[trialsPerArray]; // will be populated with the search results
-  //         Comparable[] linSTimes = new Comparable[trialsPerArray]; // will be populated with the search times for linSearch
-  //         double linAvgTime; // average time
-  //
-  //         Comparable[] binSResults = new Comparable[trialsPerArray];
-  //         Comparable[] binSTimes = new Comparable[trialsPerArray];
-  //         double binAvgTime;
-  //
-  //         System.out.println("Testing the search function ");
-  //         Comparable[] files = makeIntTestCase(arrSize); // making an array of this size
-  //
-  //         long elapStartTime = System.currentTimeMillis(); // elapsed start time
-  //         for (int x = 0; x < trialsPerArray; x++ ) {
-  //             int targetIndex = (int)(Math.random()*(arrSize+1)); // generates random index
-  //             Comparable target = files[targetIndex]; //the value of the targeted element
-  //
-  // // ~~====== TESTING BINSEARCH FOR INDIVIDUAL ELEMENTS
-  //             long startTime = System.currentTimeMillis();
-  //             int foundBin = BinSearch.binSearch(files, target);
-  //             long endTime = System.currentTimeMillis();
-  //             binSResults[x] = foundBin; // to check if the times below make sense
-  //             binSTimes[x] = (endTime - startTime);
-  //           }//end for loop
-  //
-  // // ~~====== PRINTING BINSEARCH DATA
-  //         long elapEndTime = System.currentTimeMillis(); // elapsed end time
-  //         System.out.println("Elasped time: " + (elapEndTime - elapStartTime) );
-  //
-  //         elapStartTime = System.currentTimeMillis();
-  //         for (int x = 0; x < trialsPerArray; x++ ) {
-  //           int targetIndex = (int)(Math.random()*(arrSize+1)); // generates random index
-  //           Comparable target = files[targetIndex]; //the value of the targeted element
-  //
-  // // ~~====== TESTING lINSEARCH FOR INDIVIDUAL CASES
-  //             long startTime = System.currentTimeMillis();
-  //             int foundLin = LinSearch.linSearch(files, target);
-  //             long endTime = System.currentTimeMillis();
-  //             linSResults[x] = foundLin; // to check if the times below make sense
-  //             linSTimes[x] = (endTime - startTime);
-  //
-  //         }//end for loop
-  //
-  // // ~~====== PRINTING LINSEARCH DATA
-  //         System.out.println("Testing the linSearch function");
-  //         elapEndTime = System.currentTimeMillis();
-  //         System.out.println("Elasped time: " + (elapEndTime - elapStartTime) );
       }//end main
     }//end class
