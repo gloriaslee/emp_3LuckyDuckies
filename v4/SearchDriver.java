@@ -148,9 +148,10 @@ public class SearchDriver{
     }
     
       public static String WorstCaseWrapper(int trials, int arrLength){
-      for (int i = 0; i < 100; i++){
+          
       long[] results = testWorstCase(trials, arrLength);
       String output = "";
+          for (int i = 0; i < 100; i++){
       output += ("Elapsed time for binary search for worst case: ");
       output += (results[0] + "\n");
       output += ("Elapsed time for linear search for worst case: ");
