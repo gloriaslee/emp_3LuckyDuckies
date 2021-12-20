@@ -137,8 +137,8 @@ public class SearchDriver{
 
 // ~~====== TESTING lINSEARCH
       elapStartTime = System.currentTimeMillis();
-        int targetIndex = arrSize - 1; // generates random index
-        Comparable target = files[targetIndex]; //the value of the targeted element
+         targetIndex = arrSize - 1; // generates random index
+         target = files[targetIndex]; //the value of the targeted element
         int foundLin = LinSearch.linSearch(files, target);
     
        elapEndTime = System.currentTimeMillis();
