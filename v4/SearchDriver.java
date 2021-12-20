@@ -125,7 +125,7 @@ public class SearchDriver{
     
     public static long[] testWorstCase(int trialsPerArray, int arrSize){
       Comparable[] files = makeIntTestCase(arrSize); // making an array of this size
-        long[] totalArray = long[2];
+        long[] totalArray = new long[2];
         for (int i = 0; i < 100; i++){
             long elapStartTime = System.currentTimeMillis(); // elapsed start time
           int targetIndex = arrSize - 1; // generates random index
