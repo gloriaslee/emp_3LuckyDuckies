@@ -126,6 +126,8 @@ public class SearchDriver{
     public static long[] testWorstCase(int trialsPerArray, int arrSize){
       long[] output = new long[2];
       Comparable[] files = makeIntTestCase(arrSize); // making an array of this size
+       
+ 
         // ~~====== TESTING BINSEARCH
 
       long elapStartTime = System.currentTimeMillis(); // elapsed start time
@@ -148,6 +150,7 @@ public class SearchDriver{
     }
     
       public static String WorstCaseWrapper(int trials, int arrLength){
+      for (int i = 0; i < 100; i++){
       long[] results = testWorstCase(trials, arrLength);
       String output = "";
       output += ("Elapsed time for binary search for worst case: ");
@@ -155,6 +158,7 @@ public class SearchDriver{
       output += ("Elapsed time for linear search for worst case: ");
       output += (results[1] + "\n");
       return output;
+      }
     }
 
 
