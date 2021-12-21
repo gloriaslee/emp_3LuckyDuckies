@@ -18,6 +18,7 @@ As discussed in class, we decided not to created a method to average the results
 
 ### Testing elapsed time for searching randomly generated values:
 
+
 For the same 20 million item-long array for all methods:
 
 |           | Trial 1 | Trial 2 | Trial 3 |
@@ -27,14 +28,14 @@ For the same 20 million item-long array for all methods:
 | Elapsed time for binary search for worst case | 3 | 4 | 3 |
 | Elapsed time for linear search for worst case | 17445 | 17000 | 17330 |
 
-For a different array of length 5 million (smaller array):
+For a different array of length 50 million (bigger array):
 
 |           | Trial 1 | Trial 2 | Trial 3 |
 | --------- | ----- | ---- | --- |
 | Elapsed time for binary search for 200 random values in an array | 0 | 0 | 1 |
-| Elapsed time for linear search of 200 newly generated random values | 878 | 977 | 861 |
-| Elapsed time for binary search for worst case | 0 | 1 | 0 |
-| Elapsed time for linear search for worst case | 3110 | 3072 | 3110 |
+| Elapsed time for linear search of 200 newly generated random values | 9387 | 9658 | 10203s |
+| Elapsed time for binary search for worst case | 0 | 1 | 2 |
+| Elapsed time for linear search for worst case | 43758 | 43993 | 44769 |
 
 
 ## Conclusions:
@@ -42,5 +43,3 @@ For a different array of length 5 million (smaller array):
 We found that binary search is significantly faster than linear search in finding the target relative to the same array. In most of tests we ran, binary search never exceeded more than a few ms while linear search took multiple seconds. This theory prevailed even when the binary search was run multiple times or against a larger data set.
 
 We can also look at the same type of search and their increments for more conclusive results about efficiency. When linear search searched for the worst cases, the time it took increased by about 14 thousand ms. That increment is significantly higher than the 1-2 additional ms it took for binary search to conduct the same search.
-
-Moreover, the difference in time between binary searches and linear searches appear to be larger for
