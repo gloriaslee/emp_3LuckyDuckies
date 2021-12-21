@@ -25,7 +25,7 @@ For the same 20 million item-long array for all methods:
 | --------- | ----- | ---- | --- |
 | Elapsed time for binary search for 200 random values in an array | 2 | 2 | 2 |
 | Elapsed time for linear search of 200 newly generated random values | 3591 | 3551 | 3484 |
-| Elapsed time for binary search for worst case | 3 | 4 | 3 |
+| Elapsed time for binary search for worst case | 0 | 2 | 1 |
 | Elapsed time for linear search for worst case | 17445 | 17000 | 17330 |
 
 For a different array of length 50 million (bigger array):
@@ -34,7 +34,7 @@ For a different array of length 50 million (bigger array):
 | --------- | ----- | ---- | --- |
 | Elapsed time for binary search for 200 random values in an array | 0 | 0 | 1 |
 | Elapsed time for linear search of 200 newly generated random values | 9387 | 9658 | 10203s |
-| Elapsed time for binary search for worst case | 0 | 1 | 2 |
+| Elapsed time for binary search for worst case | 1 | 1 | 2 |
 | Elapsed time for linear search for worst case | 43758 | 43993 | 44769 |
 
 
