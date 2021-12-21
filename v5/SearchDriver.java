@@ -95,7 +95,7 @@ public class SearchDriver{
     // ~~====== TESTING BINSEARCH
         long elapStartTime = System.currentTimeMillis(); // elapsed start time
         for (int x = 0; x < trialsPerArray; x++ ) {
-            int targetIndex = (int)(Math.random()*(arrSize+1)); // generates random index
+            int targetIndex = (int)(Math.random()*(arrSize)); // generates random index
             Comparable target = files[targetIndex]; //the value of the targeted element
 
             int foundBin = BinSearch.binSearch(files, target);
@@ -129,7 +129,7 @@ public class SearchDriver{
     }
 
 
-    public static long[] testWorstCase(int trialsPerArray, int arrSize){
+    public static long[] testWorstCase(int arrSize){
       Comparable[] files = makeIntTestCase(arrSize); // making an array of this size
         long[] totalArray = new long[2];
         for (int i = 0; i < 500; i++){
@@ -151,13 +151,13 @@ public class SearchDriver{
     }
 
 
-    public static String WorstCaseWrapper(int trials, int arrLength){
-      long[] results = testWorstCase(trials, arrLength);
+    public static String WorstCaseWrapper(int arrLength){
+      long[] results = testWorstCase(arrLength);
       String output = "";
       Comparable[] outArr = new Comparable[2];
-      output += ("Elapsed time for binary search for worst case: ");
+      output += ("Elapsed time for binary search for worst case in an array of length "+arrLength+": ");
       output += (results[0] + "\n");
-      output += ("Elapsed time for linear search for worst case: ");
+      output += ("Elapsed time for linear search for worst case in an array of length "+arrLength+": ");
       output += (results[1] + "\n");
       return output;
     }
@@ -166,7 +166,9 @@ public class SearchDriver{
     public static void main(String[] args) {
       System.out.println("Timing searches for multiple values together \n");
       System.out.println(MultCasesWrapper(200, 20_000_000));
-      System.out.println(WorstCaseWrapper(200, 20_000_000));
+      System.out.println(WorstCaseWrapper(20_000_000));
+      System.out.println(MultCasesWrapper(200, 50_000_000));
+      System.out.println(WorstCaseWrapper(50_000_000));
       // System.out.println("Timing the searches of each value searched \n");
       // System.out.println(printIndivResults(20, 20_000_000));
 

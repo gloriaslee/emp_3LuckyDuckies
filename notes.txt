@@ -1,3 +1,9 @@
+NOTES TO MYKOLYK: 
+- We chose to use versions so we could refer back to older versions as needed (and, as it turns out, we did just that!) 
+  The most recent work should be in v5.
+- 
+
+
 QCC:
 - Why is there such great variability in how long the same function might take, depending on when you run it?
 
@@ -20,4 +26,5 @@ no matter how large we make the array until the array is too large overall.
 - It's a better idea to get the elapsed time from the start to end of the for loop instead of getting the elapsed time
 to find each individual target.
 - Yes, it IS possible to run a bunch of stuff using comparables without getting very many weird error messages
-requiring you to run it with a special tag
+requiring you to run it with a special tag. However, in order to avoid errors, you need to compile it, compile it again with the tag 
+if prompted, then compile it a third time with  

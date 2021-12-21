@@ -19,7 +19,7 @@
       and create a method to take average of data points.
   - Created plans to create a .in file with a preset random super large array so that we don't have to waste time to generate a randomly large array.
   - Then, we will run test cases on this array.
-  - Went back from v2 to v1 because of changes we made to LinSearch and BinSearch that should not have been made to keep original functionality
+  - Went back from v2 to v1 because of changes we made to LinSearch and BinSearch that should not have been made to the method signatures.
   
   2021-12-19, whole team, v3:
   - Made Search more efficient as a whole
@@ -30,3 +30,16 @@
   - Decided to scrap our plan for finding the average because the results for binSearch and linSearch are so clear cut
   - We struggled to find a substantial difference in binSearch times because of memory limits
   - Accounted for the time for each individual test case and the elapsed time in total
+  - Wrote a method timing multiple searches together
+  - Moved above method and method with individual cases from the main into methods and wrapper methods
+
+2021-12-20, Nora and Ziying, v4:
+  - Made a new testing method (and a wrapper method for that) to test the runtimes of worst case scenarios
+  - Added preliminary results to readme.md
+
+2020-12-20, whole team, v5:
+  - Decided to scrap the method recording runtimes for multiple individual test cases
+  - Modifie arguments for worst case scenario methods to only have the necessary arguments
+  - Decided to use trials
+  - Finished writing up readme.md
+  - Checked for compliance with instructions
