@@ -18,10 +18,10 @@
 
 |           | Trial 1 | Trial 2 | Trial 3 |
 | --------- | ----- | ---- | --- |
-| Elapsed time for binary search for 200 random values in an array | 2 | 2 | 2 |
-| Elapsed time for linear search of 200 newly generated random values | 3591 | 3551 | 3484 |
-| Elapsed time for binary search for worst case | 2 | 1 | 2 |
-| Elapsed time for linear search for worst case | 16461 | 17032 | 17249 |
+| Elapsed time for binary search for 200 random values in an array |  |  |  |
+| Elapsed time for linear search of 200 newly generated random values |  |  |  |
+| Elapsed time for binary search for worst case |  |  |  |
+| Elapsed time for linear search for worst case |  |  |  |
 
 
 
