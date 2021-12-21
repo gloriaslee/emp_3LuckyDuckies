@@ -40,6 +40,6 @@ For a different array of length 50 million (bigger array):
 
 ## Conclusions:
 
-We found that binary search is significantly faster than linear search in finding the target relative to the same array. In most of tests we ran, binary search never exceeded more than a few ms while linear search took multiple seconds. This theory prevailed even when the binary search was run multiple times or against a larger data set.
+We found that binary search is significantly faster than linear search in finding the target relative to the same array. In most of tests we ran, binary search never exceeded more than a few ms while linear search took multiple ms. This theory prevailed even when the binary search was run multiple times or against a larger data set.
 
 We can also look at the same type of search and their increments for more conclusive results about efficiency. When linear search searched for the worst cases, the time it took increased by about 14 thousand ms. That increment is significantly higher than the 1-2 additional ms it took for binary search to conduct the same search.
