@@ -1,7 +1,8 @@
 NOTES TO MYKOLYK: 
 - We chose to use versions so we could refer back to older versions as needed (and, as it turns out, we did just that!) 
   The most recent work should be in v5.
-- 
+- We kept our average-like testing function even after adding a worst case scenario testing function, because we think it's 
+  still useful. 
 
 
 QCC:
@@ -27,4 +28,4 @@ no matter how large we make the array until the array is too large overall.
 to find each individual target.
 - Yes, it IS possible to run a bunch of stuff using comparables without getting very many weird error messages
 requiring you to run it with a special tag. However, in order to avoid errors, you need to compile it, compile it again with the tag 
-if prompted, then compile it a third time with  
+if prompted, then compile it a third time without the tag. (We don't know why, though) 
