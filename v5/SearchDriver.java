@@ -30,8 +30,9 @@ public class SearchDriver{
         return output;
     }
 
+
     // -----------------------------------------
-    // See earlier versions for a method (and a wrapper) allowing the user to 
+    // See earlier versions for a method (and a wrapper) allowing the user to
     // see the runtimes of multiple individual searches.
 
     public static Comparable[][] testIndvCases(int trialsPerArray, int arrSize){ // returns the two lists of times; linear search first
@@ -62,7 +63,6 @@ public class SearchDriver{
           endTime = System.currentTimeMillis();
           linSResults[x] = foundLin; // to check if the times below make sense
           linSTimes[x] = (endTime - startTime);
-
       }//end for loop
 
       Comparable[][] toReturn = new Comparable[4][trialsPerArray];
@@ -71,8 +71,8 @@ public class SearchDriver{
       toReturn[2] = binSResults;
       toReturn[3] = binSTimes;
       return toReturn;
-
     }
+
 
     public static String printIndivResults( int trials, int arrLength) // wrapper method for testing individual trials, so that you get a commprehensible printed result
       { //int counter = 0;
@@ -91,8 +91,8 @@ public class SearchDriver{
     public static long[] testMultipleCases(int trialsPerArray, int arrSize){ // returns the
         long[] output = new long[2];
         Comparable[] files = makeIntTestCase(arrSize); // making an array of this size
-          // ~~====== TESTING BINSEARCH
 
+    // ~~====== TESTING BINSEARCH
         long elapStartTime = System.currentTimeMillis(); // elapsed start time
         for (int x = 0; x < trialsPerArray; x++ ) {
             int targetIndex = (int)(Math.random()*(arrSize+1)); // generates random index
@@ -103,7 +103,7 @@ public class SearchDriver{
         long elapEndTime = System.currentTimeMillis();
         output[0] = elapEndTime - elapStartTime; // this represents the time for binary search
 
-      // ~~====== TESTING lINSEARCH
+    // ~~====== TESTING lINSEARCH
         elapStartTime = System.currentTimeMillis();
         for (int x = 0; x < trialsPerArray; x++ ) {
           int targetIndex = (int)(Math.random()*(arrSize+1)); // generates random index
@@ -117,6 +117,7 @@ public class SearchDriver{
       return output;
       }
 
+
     public static String MultCasesWrapper(int trials, int arrLength){
       long[] results = testMultipleCases(trials, arrLength);
       String output = "";
@@ -126,7 +127,6 @@ public class SearchDriver{
       output += (results[1] + "\n");
       return output;
     }
-
 
 
     public static long[] testWorstCase(int trialsPerArray, int arrSize){
