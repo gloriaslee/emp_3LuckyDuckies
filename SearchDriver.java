@@ -167,10 +167,15 @@ public class SearchDriver{
       System.out.println("Timing searches for multiple values together \n");
       System.out.println(MultCasesWrapper(500, 1_000_000));
       System.out.println(WorstCaseWrapper(1_000_000));
+      System.out.println(MultCasesWrapper(500, 2_000_000));
+      System.out.println(WorstCaseWrapper(2_000_000));
+      System.out.println(MultCasesWrapper(500, 5_000_000));
+      System.out.println(WorstCaseWrapper(5_000_000));
+      System.out.println(MultCasesWrapper(500, 10_000_000));
+      System.out.println(WorstCaseWrapper(10_000_000));
       System.out.println(MultCasesWrapper(500, 20_000_000));
       System.out.println(WorstCaseWrapper(20_000_000));
-      System.out.println(MultCasesWrapper(500, 50_000_000));
-      System.out.println(WorstCaseWrapper(50_000_000));
+
       // System.out.println("Timing the searches of each value searched \n");
       // System.out.println(printIndivResults(20, 20_000_000));
 
