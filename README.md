@@ -16,17 +16,14 @@ As discussed in class, we decided not to created a method to average the results
 
 ## Results:
 
-### Testing elapsed time for searching randomly generated values:
+Elapsed time, in milliseconds, for the following test cases: 
 
-
-For the same 20 million item-long array for all methods:
-
-|           | Trial 1 | Trial 2 | Trial 3 |
-| --------- | ----- | ---- | --- |
-| Elapsed time for binary search of 200 random values | 2 | 2 | 2 |
-| Elapsed time for linear search of 200 random values | 3591 | 3551 | 3484 |
-| Elapsed time for worst case binary search | 0 | 2 | 1 |
-| Elapsed time for worst case linear search | 17445 | 17000 | 17330 |
+| Array length | Binary search of 200 random values | Linear search of 200 random values | Worst case binary search | Worst case linear search 3 |
+| ----- | --------- | ----- | ---- | --- |
+| 20,000,000: Trial 1 | 2 | 3591 | 0 | 17445 |
+| 20,000,000: Trial 2 | 2 | 3551 | 2 | 17000 |
+| 20,000,000: Trial 3 | 2 | 3484 | 1 | 17330 |
+|   |  |  |  |   |
 
 |           | Trial 1 | Trial 2 | Trial 3 |
 | --------- | ----- | ---- | --- |
