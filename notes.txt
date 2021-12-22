@@ -29,3 +29,10 @@ to find each individual target.
 - Yes, it IS possible to run a bunch of stuff using comparables without getting very many weird error messages
 requiring you to run it with a special tag. However, in order to avoid errors, you need to compile it, compile it again with the tag 
 if prompted, then compile it a third time without the tag. (We don't know why, though) 
+
+GALLERY TOUR: 
+- We seem not to be the only group rather attached to our average-of-random-values search comparison method. 
+- Team Mumblecore had an interesting and useful table, listing runtimes for the worst cases of linear and binary search 
+based on the length of the array. This seems to address the hypothesis more directly than the way we were previously presenting our data
+- Hearing the ways that other teas described their experiments, in general, we need to be careful around our use of words like 'trial'
+and 'test case', because using them ambiguously leads to confusion. 
