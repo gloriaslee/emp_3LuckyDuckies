@@ -18,19 +18,15 @@ As discussed in class, we decided not to created a method to average the results
 
 Elapsed time, in milliseconds, for the following test cases: 
 
-| Array length | Binary search of 200 random values | Linear search of 200 random values | Worst case binary search | Worst case linear search 3 |
+| Array length | Trial | Binary search of 200 random values | Linear search of 200 random values | Worst case binary search | Worst case linear search 3 |
 | ----- | --------- | ----- | ---- | --- |
-| 20,000,000: Trial 1 | 2 | 3591 | 0 | 17445 |
-| 20,000,000: Trial 2 | 2 | 3551 | 2 | 17000 |
-| 20,000,000: Trial 3 | 2 | 3484 | 1 | 17330 |
-|   |  |  |  |   |
+| 20,000,000 | 1 | 2 | 3591 | 0 | 17445 |
+| 20,000,000 | 2 | 2 | 3551 | 2 | 17000 |
+| 20,000,000 | 3 | 2 | 3484 | 1 | 17330 |
+| 50,000,000 | 1 | 0 | 9387 | 1 | 43758 |
+| 50,000,000 | 2 | 0 | 9658 | 1 | 43993 |
+| 50,000,000 | 3 | 1 | 10203 | 2 | 44769 |
 
-|           | Trial 1 | Trial 2 | Trial 3 |
-| --------- | ----- | ---- | --- |
-| Elapsed time for binary search for 200 random values in an array | 2 | 2 | 2 |
-| Elapsed time for linear search of 200 newly generated random values | 3591 | 3551 | 3484 |
-| Elapsed time for binary search for worst case | 0 | 2 | 1 |
-| Elapsed time for linear search for worst case | 17445 | 17000 | 17330 |
 
 For a different array of length 50 million (bigger array):
 
