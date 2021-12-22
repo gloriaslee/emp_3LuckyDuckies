@@ -43,3 +43,7 @@
   - Decided to use trials
   - Finished writing up readme.md
   - Checked for compliance with instructions
+
+2020-12-21, whole team, v5: 
+  - Reworked data-displaying table
+  - Added notes from gallery tour
