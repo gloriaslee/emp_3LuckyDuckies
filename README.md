@@ -18,14 +18,23 @@ As discussed in class, we decided not to created a method to average the results
 
 Elapsed time, in milliseconds, for the following test cases: 
 
-| Array length | Trial | Bin. search of 200 random values | Lin. search of 200 random values | Worst case bin. search | Worst case lin. search 3 |
+| Array length | Trial | Bin. search of 500 random values | Lin. search of 500 random values | Worst case bin. search | Worst case lin. search 3 |
 | ----- | --------- | ----- | ---- | --- | ---- |
-| 20,000,000 | 1 | 2 | 3591 | 0 | 17445 |
-|  | 2 | 2 | 3551 | 2 | 17000 |
-|   | 3 | 2 | 3484 | 1 | 17330 |
-|  50,000,000 | 1 | 0 | 9387 | 1 | 43758 |
-|   | 2 | 0 | 9658 | 1 | 43993 |
-|  | 3 | 1 | 10203 | 2 | 44769 |
+|  1,000,000 | 1 | 2 | 286 | 1 | 669 |
+|   | 2 | 2 | 272 | 1 | 600 |
+|  | 3 | 2 | 262 | 2 | 600 |
+|  2,000,000 | 1 | 1 | 855 | 0 | 1603 |
+|   | 2 | 1 | 820 | 1 | 1483 |
+|  | 3 | 1 | 863 | 0 | 1522 |
+|  5,000,000 | 1 | 1 | 2275 | 0 | 3993 |
+|   | 2 | 1 | 2136 | 1 | 4153 |
+|  | 3 | 0 | 2136 | 2 | 4092 |
+| 10,000,000 | 1 | 0 | 3254 | 1 | 6400 |
+|  | 2 | 1 | 3453 | 1 | 6445 |
+|   | 3 | 0 | 3296 | 0 | 6407 |
+|  20,000,000 | 1 | 0 | 9396 | 1 | 15065 |
+|   | 2 | 1 | 9228 | 1 | 15255 |
+|  | 3 | 1 | 9260 | 1 | 14894 |
 
 
 ## Conclusions:
