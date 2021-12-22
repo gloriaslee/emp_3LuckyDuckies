@@ -18,7 +18,7 @@ As discussed in class, we decided not to created a method to average the results
 
 Elapsed time, in milliseconds, for the following test cases: 
 
-| Array length | Trial | Binary search of 200 random values | Linear search of 200 random values | Worst case binary search | Worst case linear search 3 |
+| Array length | Trial | Bin. search of 200 random values | Lin. search of 200 random values | Worst case bin. search | Worst case lin. search 3 |
 | ----- | --------- | ----- | ---- | --- |
 | 20,000,000 | 1 | 2 | 3591 | 0 | 17445 |
 | 20,000,000 | 2 | 2 | 3551 | 2 | 17000 |
