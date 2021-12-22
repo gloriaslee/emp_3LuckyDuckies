@@ -165,9 +165,11 @@ public class SearchDriver{
 
     public static void main(String[] args) {
       System.out.println("Timing searches for multiple values together \n");
-      System.out.println(MultCasesWrapper(200, 20_000_000));
+      System.out.println(MultCasesWrapper(500, 1_000_000));
+      System.out.println(WorstCaseWrapper(1_000_000));
+      System.out.println(MultCasesWrapper(500, 20_000_000));
       System.out.println(WorstCaseWrapper(20_000_000));
-      System.out.println(MultCasesWrapper(200, 50_000_000));
+      System.out.println(MultCasesWrapper(500, 50_000_000));
       System.out.println(WorstCaseWrapper(50_000_000));
       // System.out.println("Timing the searches of each value searched \n");
       // System.out.println(printIndivResults(20, 20_000_000));
